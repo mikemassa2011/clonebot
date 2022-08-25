@@ -45,6 +45,7 @@ class Bot(Client):
         try:
             await self.USER.send_message(usr_bot_me.username, "%session_start%")
         except Exception:
+            print(Msg.BOT_BLOCKED_MSG)
 
     async def stop(self, *args):
         await super().stop()
